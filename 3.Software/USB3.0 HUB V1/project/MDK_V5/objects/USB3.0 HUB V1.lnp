@@ -1,0 +1,17 @@
+--cpu=Cortex-M4 --fpu=SoftVFP
+".\objects\at32f421_int.o"
+".\objects\at32f421_wk_config.o"
+".\objects\main.o"
+".\objects\at32f421_crm.o"
+".\objects\at32f421_debug.o"
+".\objects\at32f421_flash.o"
+".\objects\at32f421_gpio.o"
+".\objects\at32f421_misc.o"
+".\objects\at32f421_pwc.o"
+".\objects\at32f421_usart.o"
+".\objects\system_at32f421.o"
+".\objects\startup_at32f421.o"
+--strict --scatter ".\objects\USB3.0 HUB V1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listings\USB3.0 HUB V1.map" -o ".\objects\USB3.0 HUB V1.axf"
